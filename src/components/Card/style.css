@@ -1,0 +1,43 @@
+.card ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #313131;
+}
+.card ul li{
+    text-align: center;
+    color: white;
+    margin: 10px 10px;
+    padding: 30px;
+    border-radius: 5px;
+}
+.card ul li h1, .card ul li p{
+    padding: 5px 0px;
+}
+.card ul .slytherin{
+    background-color: rgb(93, 196, 93);
+    color: rgb(2, 80, 2);
+    box-shadow: 1px 1px 20px green;
+}
+.card ul .gryffindor{
+    background-color: rgb(236, 93, 93);
+    color: rgb(150, 5, 5);
+    box-shadow: 1px 1px 20px red;
+}
+.card ul .hufflepuff{
+    background-color: rgb(196, 196, 72);
+    color: rgb(109, 109, 5);
+    box-shadow: 1px 1px 20px yellow;
+}
+.card ul .ravenclaw{
+    background-color: rgb(79, 79, 228);
+    color: rgb(8, 8, 153);
+    box-shadow: 1px 1px 20px blue;
+}
+.card ul .nohouse{
+    background-color: rgb(146, 143, 143);
+    color: rgb(71, 71, 71);
+    box-shadow: 1px 1px 20px gray;
+}
