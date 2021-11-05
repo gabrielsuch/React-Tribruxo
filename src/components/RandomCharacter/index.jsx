@@ -5,11 +5,11 @@ import {useState} from "react"
 
 const Random = ({characters}) => {
 
-    const [personagens, setPersonagens] = useState([])
+    const [students, setStudents] = useState([])
 
     const randomCharacter = () => {
         const houses = ["Slytherin", "Gryffindor", "Hufflepuff", "Ravenclaw", ""]
-        let arrayPersonagens = []
+        let arrayStudents = []
 
         for(let i=0 ; i<3 ; i++)
         {
@@ -17,16 +17,21 @@ const Random = ({characters}) => {
             const newFilter = characters.filter((item) => item.house === houses[randomHouse])
             const randomNumber = Math.floor(Math.random() * (newFilter.length - 0) + 0)
             houses.splice(randomHouse, 1)
-            arrayPersonagens = [...arrayPersonagens, newFilter[randomNumber]]
+            arrayStudents = [...arrayStudents, newFilter[randomNumber]]
         }
-        setPersonagens([...arrayPersonagens])
+        setStudents([...arrayStudents])
     }
 
     return(
         <div>
             <button onClick={randomCharacter}>Sortear</button>
-
-            <Card personagens={personagens} setPersonagens={setPersonagens}/>
+            <ul>
+            {
+                students.map((student, index) => (
+                    <Card key={index} students={student} index={index}/>
+                ))
+            }
+            </ul>
         </div>
     )
 }
